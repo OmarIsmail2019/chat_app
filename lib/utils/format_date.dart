@@ -15,7 +15,8 @@ class FormatDate {
     required String time,
     bool showYear = false,
   }) {
-    final DateTime sent = DateTime.fromMillisecondsSinceEpoch(int.parse(time));
+    final DateTime sent =
+        DateTime.fromMillisecondsSinceEpoch(int.parse(time.toString()));
     final DateTime now = DateTime.now();
 
     if (now.day == sent.day &&

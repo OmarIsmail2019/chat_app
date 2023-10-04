@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chat/features/layout/model/user_model.dart';
 import 'package:chat/utils/colors.dart';
-import 'package:chat/utils/format_date.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -81,31 +80,6 @@ class _ChatProfileViewState extends State<ChatProfileView> {
                   ),
                   Text(
                     widget.userModel.about,
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          fontSize: 15,
-                          color: Colors.grey,
-                        ),
-                  ),
-                ],
-              ),
-              const Spacer(),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Join : ',
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          color: kTextColor,
-                          fontSize: 15,
-                        ),
-                  ),
-                  Text(
-                    FormatDate.getLastMessageTime(
-                      context: context,
-                      time: widget.userModel.createdAt,
-                      showYear: true,
-                    ),
                     style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                           fontSize: 15,
                           color: Colors.grey,

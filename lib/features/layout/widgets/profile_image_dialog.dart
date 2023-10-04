@@ -6,7 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileImageDialog extends StatelessWidget {
-  const ProfileImageDialog({super.key, required this.userModel});
+  const ProfileImageDialog({
+    super.key,
+    required this.userModel,
+  });
+
   final UserModel userModel;
 
   @override
@@ -18,18 +22,20 @@ class ProfileImageDialog extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       content: SizedBox(
-        height: MediaQuery.sizeOf(context).height * .3,
-        width: MediaQuery.sizeOf(context).width * 0.6,
+        height: MediaQuery.sizeOf(context).height * .36,
+        width: MediaQuery.sizeOf(context).width * 0.4,
         child: Stack(
           children: [
             Positioned(
-              top: sizeOf.height * 0.066,
-              left: sizeOf.width * 0.08,
+              top: sizeOf.height * 0.06,
+              left: sizeOf.width * 0.07,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(sizeOf.height * 0.25),
+                borderRadius: BorderRadius.circular(
+                  sizeOf.height * 0.2,
+                ),
                 child: CachedNetworkImage(
-                  width: sizeOf.width * .5,
-                  fit: BoxFit.cover,
+                  width: sizeOf.width * .4,
+                  fit: BoxFit.contain,
                   imageUrl: userModel.image,
                   errorWidget: (
                     context,
