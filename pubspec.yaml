@@ -22,12 +22,15 @@ dependencies:
   emoji_picker_flutter: ^1.6.1
   firebase_auth: ^4.9.0
   firebase_core: ^2.15.1
+  firebase_messaging: ^14.6.9
   firebase_storage: ^11.2.7
   flutter:
     sdk: flutter
+  flutter_notification_channel: ^2.0.0
   font_awesome_flutter: null
   google_fonts: null
   google_sign_in: ^6.1.5
+  http: ^1.1.0
   image_picker: ^1.0.4
 
 dev_dependencies:
