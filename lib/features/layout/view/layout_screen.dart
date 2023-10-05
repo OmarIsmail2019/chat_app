@@ -29,7 +29,7 @@ class _LayOutScreenState extends State<LayOutScreen> {
   void initState() {
     super.initState();
     APIs.getSellInfo();
-    APIs.getLastActivityStatus(true);
+    
     SystemChannels.lifecycle.setMessageHandler((message) {
       log("Message : $message");
       if (message.toString().contains('resume')) {
